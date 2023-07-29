@@ -47,7 +47,7 @@ warmup_iters = 100
 
 def main(
     data_dir: str = "data/alpaca", 
-    pretrained_path: str = "checkpoints/lit-llama/3B/lit-llama.pth",
+    pretrained_path: str = "checkpoints/lit-llama/7B/lit-llama.pth",
     tokenizer_path: str = "checkpoints/lit-llama/tokenizer.model",
     out_dir: str = "out/lora/alpaca",
 ):
