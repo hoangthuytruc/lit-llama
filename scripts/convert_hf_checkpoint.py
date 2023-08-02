@@ -43,6 +43,9 @@ def convert_hf_checkpoint(
 
     with EmptyInitOnDevice(device="meta", dtype=dtype):
         model = LLaMA(config)
+   
+    with open(checkpoint_dir / "lit_config.json", "w") as json_config:
+        json.dump(model.config.__dict__, json_config)
 
     qkv_size = model.transformer.h[0].attn.c_attn.weight.shape[0] // 3
 
